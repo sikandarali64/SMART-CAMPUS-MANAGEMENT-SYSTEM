@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - LearnHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Learn<span class="highlight">Hub</span></span>
+                </div>
+                <button class="sidebar-close" id="sidebarClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#my-courses" class="nav-item" data-section="my-courses">
+                    <i class="fas fa-book"></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="#wishlist" class="nav-item" data-section="wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span>Wishlist</span>
+                </a>
+                <a href="#certificates" class="nav-item" data-section="certificates">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certificates</span>
+                </a>
+                <a href="#assignments" class="nav-item" data-section="assignments">
+                    <i class="fas fa-tasks"></i>
+                    <span>Assignments</span>
+                </a>
+                <a href="#messages" class="nav-item" data-section="messages">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                    <span class="notification-badge">3</span>
+                </a>
+                <a href="#settings" class="nav-item" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="btn btn-outline btn-block">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Bar -->
+            <div class="dashboard-topbar">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="topbar-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search courses, assignments...">
+                </div>
+
+                <div class="topbar-icons">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    <div class="profile-dropdown">
+                        <button class="profile-btn">
+                            <div class="profile-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#"><i class="fas fa-user"></i> Profile</a>
+                            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                            <hr>
+                            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Welcome Section -->
+                <section class="welcome-section" id="dashboard">
+                    <div class="welcome-header">
+                        <div>
+                            <h1>Welcome back, Alex! 👋</h1>
+                            <p>Keep learning, keep growing.</p>
+                        </div>
+                        <div class="profile-card">
+                            <div class="profile-avatar-large">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <h3>Alex Johnson</h3>
+                            <p>alex.johnson@example.com</p>
+                            <span class="badge badge-premium">
+                                <i class="fas fa-crown"></i> Premium Member
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Continue Learning -->
+                    <div class="section-card">
+                        <div class="section-header">
+                            <h2>Continue Learning</h2>
+                            <a href="#" class="view-all">View All →</a>
+                        </div>
+
+                        <div class="continue-learning-list">
+                            <div class="learning-item">
+                                <div class="item-image">
+                                    <i class="fas fa-react"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>React - The Complete Guide</h4>
+                                    <p class="lesson-info">Section 8 of 15 • State Management</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 73%"></div>
+                                    </div>
+                                    <p class="progress-text">73% completed • Last accessed: Today</p>
+                                </div>
+                                <button class="btn btn-primary">Continue</button>
+                            </div>
+
+                            <div class="learning-item">
+                                <div class="item-image">
+                                    <i class="fas fa-python"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>Python for Data Science</h4>
+                                    <p class="lesson-info">Section 4 of 12 • Data Visualization</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 46%"></div>
+                                    </div>
+                                    <p class="progress-text">46% completed • Last accessed: Yesterday</p>
+                                </div>
+                                <button class="btn btn-primary">Continue</button>
+                            </div>
+
+                            <div class="learning-item">
+                                <div class="item-image">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>Web Design Masterclass</h4>
+                                    <p class="lesson-info">Section 2 of 10 • Color Theory</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 18%"></div>
+                                    </div>
+                                    <p class="progress-text">18% completed • Last accessed: 3 days ago</p>
+                                </div>
+                                <button class="btn btn-primary">Continue</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Your Progress -->
+                    <div class="section-card">
+                        <h2>Your Progress</h2>
+                        <div class="progress-cards-grid">
+                            <div class="progress-card">
+                                <div class="progress-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="progress-card-content">
+                                    <p class="progress-label">Courses Completed</p>
+                                    <h3 class="progress-number">68%</h3>
+                                    <span class="progress-subtext">12 courses completed</span>
+                                </div>
+                            </div>
+
+                            <div class="progress-card">
+                                <div class="progress-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="progress-card-content">
+                                    <p class="progress-label">Hours Learned</p>
+                                    <h3 class="progress-number">124</h3>
+                                    <span class="progress-subtext">This month: 18 hours</span>
+                                </div>
+                            </div>
+
+                            <div class="progress-card">
+                                <div class="progress-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="progress-card-content">
+                                    <p class="progress-label">Certificates Earned</p>
+                                    <h3 class="progress-number">12</h3>
+                                    <span class="progress-subtext">Verified certificates</span>
+                                </div>
+                            </div>
+
+                            <div class="progress-card">
+                                <div class="progress-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                    <i class="fas fa-fire"></i>
+                                </div>
+                                <div class="progress-card-content">
+                                    <p class="progress-label">Day Streak</p>
+                                    <h3 class="progress-number">7</h3>
+                                    <span class="progress-subtext">Keep it up!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earned Certificates -->
+                    <div class="section-card">
+                        <div class="section-header">
+                            <h2>Earned Certificates</h2>
+                            <a href="#" class="view-all">View All →</a>
+                        </div>
+
+                        <div class="certificates-grid">
+                            <div class="certificate-item">
+                                <div class="certificate-image">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <h4>React - The Complete Guide</h4>
+                                <p>Issued on May 12, 2024</p>
+                                <span class="badge badge-success">
+                                    <i class="fas fa-check-circle"></i> Verified
+                                </span>
+                                <button class="btn btn-sm btn-outline">Download</button>
+                            </div>
+
+                            <div class="certificate-item">
+                                <div class="certificate-image">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <h4>Python for Data Science</h4>
+                                <p>Issued on Apr 28, 2024</p>
+                                <span class="badge badge-success">
+                                    <i class="fas fa-check-circle"></i> Verified
+                                </span>
+                                <button class="btn btn-sm btn-outline">Download</button>
+                            </div>
+
+                            <div class="certificate-item">
+                                <div class="certificate-image">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <h4>CSS - Flexbox & Grid</h4>
+                                <p>Issued on Mar 15, 2024</p>
+                                <span class="badge badge-success">
+                                    <i class="fas fa-check-circle"></i> Verified
+                                </span>
+                                <button class="btn btn-sm btn-outline">Download</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Achievements -->
+                    <div class="section-card">
+                        <div class="section-header">
+                            <h2>Recent Achievements</h2>
+                            <a href="#" class="view-all">View All →</a>
+                        </div>
+
+                        <div class="achievements-list">
+                            <div class="achievement-item">
+                                <div class="achievement-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-fire"></i>
+                                </div>
+                                <div>
+                                    <h4>Consistency King</h4>
+                                    <p>7 day learning streak</p>
+                                </div>
+                            </div>
+
+                            <div class="achievement-item">
+                                <div class="achievement-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                    <i class="fas fa-zap"></i>
+                                </div>
+                                <div>
+                                    <h4>Quick Learner</h4>
+                                    <p>Completed 5 quizzes</p>
+                                </div>
+                            </div>
+
+                            <div class="achievement-item">
+                                <div class="achievement-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h4>Knowledge Seeker</h4>
+                                    <p>Enrolled in 10 courses</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- My Courses Section -->
+                <section class="section-card" id="my-courses" style="display: none;">
+                    <h2>My Courses</h2>
+                    <p>Manage and track all your enrolled courses.</p>
+                    <!-- Content will be added here -->
+                </section>
+
+                <!-- Wishlist Section -->
+                <section class="section-card" id="wishlist" style="display: none;">
+                    <h2>My Wishlist</h2>
+                    <p>Save courses to your wishlist for later.</p>
+                    <!-- Content will be added here -->
+                </section>
+
+                <!-- Certificates Section -->
+                <section class="section-card" id="certificates" style="display: none;">
+                    <h2>My Certificates</h2>
+                    <p>View and download all your earned certificates.</p>
+                    <!-- Content will be added here -->
+                </section>
+
+                <!-- Assignments Section -->
+                <section class="section-card" id="assignments" style="display: none;">
+                    <h2>My Assignments</h2>
+                    <p>View and submit your course assignments.</p>
+                    <!-- Content will be added here -->
+                </section>
+
+                <!-- Messages Section -->
+                <section class="section-card" id="messages" style="display: none;">
+                    <h2>Messages</h2>
+                    <p>Communicate with instructors and peers.</p>
+                    <!-- Content will be added here -->
+                </section>
+
+                <!-- Settings Section -->
+                <section class="section-card" id="settings" style="display: none;">
+                    <h2>Settings</h2>
+                    <p>Manage your account and preferences.</p>
+                    <!-- Content will be added here -->
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

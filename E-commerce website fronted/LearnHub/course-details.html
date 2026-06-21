@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details - LearnHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar sticky" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Learn<span class="highlight">Hub</span></span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+
+            <div class="nav-icons">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Hero -->
+    <div class="course-hero">
+        <div class="course-hero-image">
+            <div class="course-image-large" style="text-align: center; padding: 50px; background: #61dafb; color: #282c34; border-radius: 8px;">
+                <i class="fab fa-react fa-5x"></i>
+            </div>
+        </div>
+        <div class="course-hero-content">
+            <div class="breadcrumb">
+                <a href="courses.html">Courses</a> / Web Development
+            </div>
+            <h1>React - The Complete Guide</h1>
+            <p class="course-tagline">Learn React from the ground up. Build amazing web applications with React.</p>
+            
+            <div class="course-meta-info">
+                <div class="meta-item">
+                    <i class="fas fa-star"></i>
+                    <span>4.8 (2,456 reviews)</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-users"></i>
+                    <span>45,382 students</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-globe"></i>
+                    <span>English</span>
+                </div>
+            </div>
+
+            <div class="course-instructor-hero">
+                <div class="instructor-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div>
+                    <p>Instructor</p>
+                    <h4>Sarah Anderson</h4>
+                </div>
+            </div>
+
+            <div class="course-hero-buttons">
+                <button class="btn btn-primary btn-lg">Enroll Now</button>
+                <button class="btn btn-outline btn-lg">
+                    <i class="fas fa-heart"></i> Wishlist
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="course-details">
+        <div class="container">
+            <div class="course-details-wrapper">
+                <div class="course-details-main">
+                    <!-- Tabs -->
+                    <div class="course-tabs">
+                        <button class="tab-btn active" data-tab="overview">Overview</button>
+                        <button class="tab-btn" data-tab="curriculum">Curriculum</button>
+                        <button class="tab-btn" data-tab="reviews">Reviews</button>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="tabs-content">
+                        <!-- Overview Tab -->
+                        <div class="tab-content active" id="overview">
+                            <div class="section">
+                                <h2>About This Course</h2>
+                                <p>React has taken the web development world by storm. It's a JavaScript library for building user interfaces with components. Learn how to use React to create amazing, interactive web applications.</p>
+                                <p>This comprehensive course covers everything you need to know about React, from the basics to advanced patterns. By the end of this course, you'll be able to build production-ready React applications.</p>
+                            </div>
+
+                            <div class="section">
+                                <h2>What You'll Learn</h2>
+                                <div class="learning-points">
+                                    <div class="point">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Master React fundamentals and components</span>
+                                    </div>
+                                    <div class="point">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Build complex user interfaces with React</span>
+                                    </div>
+                                    <div class="point">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Understand state management with Redux</span>
+                                    </div>
+                                    <div class="point">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Work with React Hooks and Context API</span>
+                                    </div>
+                                    <div class="point">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Implement routing with React Router</span>
+                                    </div>
+                                    <div class="point">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Test React applications effectively</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="section">
+                                <h2>Requirements</h2>
+                                <ul class="requirements-list">
+                                    <li>Basic JavaScript knowledge</li>
+                                    <li>Understanding of HTML and CSS</li>
+                                    <li>A code editor (VS Code recommended)</li>
+                                    <li>Node.js installed on your computer</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Curriculum Tab -->
+                        <div class="tab-content" id="curriculum">
+                            <div class="section">
+                                <h2>Course Curriculum</h2>
+                                <div class="curriculum-sections">
+                                    <!-- Section 1 -->
+                                    <div class="curriculum-item">
+                                        <button class="curriculum-header">
+                                            <span>
+                                                <i class="fas fa-chevron-right"></i>
+                                                Section 1: Getting Started with React
+                                            </span>
+                                            <span class="lesson-count">3 lessons • 55 min</span>
+                                        </button>
+                                        <div class="curriculum-content" style="display:block;">
+                                            <div class="lesson">
+                                                <i class="fas fa-play-circle"></i>
+                                                <span>What is React?</span>
+                                                <span class="lesson-duration">12 min</span>
+                                            </div>
+                                            <div class="lesson">
+                                                <i class="fas fa-play-circle"></i>
+                                                <span>Setting up React Development Environment</span>
+                                                <span class="lesson-duration">18 min</span>
+                                            </div>
+                                            <div class="lesson">
+                                                <i class="fas fa-play-circle"></i>
+                                                <span>JSX and Components</span>
+                                                <span class="lesson-duration">25 min</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>
+                        <i class="fas fa-graduation-cap"></i>
+                        Learn<span class="highlight">Hub</span>
+                    </h3>
+                    <p>Empowering learners worldwide with quality education and skills training.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LearnHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

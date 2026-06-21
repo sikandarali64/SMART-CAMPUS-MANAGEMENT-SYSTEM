@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <linearGradient id="courseGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="300" height="300" fill="url(#courseGrad3)"/>
+  
+  <!-- Chart bars -->
+  <rect x="80" y="160" width="30" height="80" fill="white" opacity="0.8"/>
+  <rect x="125" y="120" width="30" height="120" fill="white" opacity="0.8"/>
+  <rect x="170" y="90" width="30" height="150" fill="white" opacity="0.8"/>
+  
+  <!-- Chart line -->
+  <polyline points="95,160 140,120 185,90" stroke="white" stroke-width="4" fill="none" opacity="0.9"/>
+  
+  <!-- Grid -->
+  <line x1="60" y1="240" x2="240" y2="240" stroke="white" stroke-width="2" opacity="0.5"/>
+  <line x1="60" y1="70" x2="60" y2="240" stroke="white" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Text label -->
+  <text x="150" y="260" font-family="Arial" font-size="16" fill="white" text-anchor="middle" opacity="0.8">Business</text>
+</svg>

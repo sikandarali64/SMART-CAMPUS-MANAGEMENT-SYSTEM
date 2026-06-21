@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - LearnHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/courses.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar sticky" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Learn<span class="highlight">Hub</span></span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#why-us" class="nav-link">Why Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+
+            <div class="nav-icons">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Explore Our Courses</h1>
+            <p>Find the perfect course to advance your skills</p>
+        </div>
+    </div>
+
+    <!-- Courses Section -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="courses-wrapper">
+                <!-- Sidebar -->
+                <aside class="courses-sidebar">
+                    <!-- Search -->
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search courses...">
+                    </div>
+
+                    <!-- Categories Filter -->
+                    <div class="filter-group">
+                        <h3>Categories</h3>
+                        <div class="filter-options">
+                            <label class="filter-label">
+                                <input type="checkbox" class="category-filter" value="all" checked>
+                                <span>All Categories</span>
+                            </label>
+                            <label class="filter-label">
+                                <input type="checkbox" class="category-filter" value="web">
+                                <span>Web Development</span>
+                            </label>
+                            <label class="filter-label">
+                                <input type="checkbox" class="category-filter" value="data">
+                                <span>Data Science</span>
+                            </label>
+                            <label class="filter-label">
+                                <input type="checkbox" class="category-filter" value="design">
+                                <span>UI/UX Design</span>
+                            </label>
+                            <label class="filter-label">
+                                <input type="checkbox" class="category-filter" value="mobile">
+                                <span>Mobile Development</span>
+                            </label>
+                            <label class="filter-label">
+                                <input type="checkbox" class="category-filter" value="devops">
+                                <span>DevOps & Cloud</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="filter-group">
+                        <h3>Price Range</h3>
+                        <div class="filter-options">
+                            <label class="filter-label">
+                                <input type="radio" name="price" value="free" class="price-filter">
+                                <span>Free</span>
+                            </label>
+                            <label class="filter-label">
+                                <input type="radio" name="price" value="paid" class="price-filter">
+                                <span>Paid</span>
+                            </label>
+                            <label class="filter-label">
+                                <input type="radio" name="price" value="all" class="price-filter" checked>
+                                <span>All Prices</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Rating Filter -->
+                    <div class="filter-group">
+                        <h3>Rating</h3>
+                        <div class="filter-options">
+                            <label class="filter-label">
+                                <input type="checkbox" class="rating-filter" value="5">
+                                <span><i class="fas fa-star"></i> 5 Stars</span>
+                            </label>
+                            <label class="filter-label">
+                                <input type="checkbox" class="rating-filter" value="4">
+                                <span><i class="fas fa-star"></i> 4+ Stars</span>
+                            </label>
+                            <label class="filter-label">
+                                <input type="checkbox" class="rating-filter" value="3">
+                                <span><i class="fas fa-star"></i> 3+ Stars</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Level Filter -->
+                    <div class="filter-group">
+                        <h3>Level</h3>
+                        <div class="filter-options">
+                            <label class="filter-label">
+                                <input type="checkbox" class="level-filter" value="beginner">
+                                <span>Beginner</span>
+                            </label>
+                            <label class="filter-label">
+                                <input type="checkbox" class="level-filter" value="intermediate">
+                                <span>Intermediate</span>
+                            </label>
+                            <label class="filter-label">
+                                <input type="checkbox" class="level-filter" value="advanced">
+                                <span>Advanced</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-block" id="resetFilters">Reset Filters</button>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="courses-main">
+                    <!-- Sort Options -->
+                    <div class="courses-header">
+                        <p class="results-count">Showing <span id="courseCount">12</span> courses</p>
+                        <div class="sort-options">
+                            <select id="sortSelect" class="sort-select">
+                                <option value="popular">Most Popular</option>
+                                <option value="rating">Highest Rated</option>
+                                <option value="newest">Newest</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Courses Grid -->
+                    <div class="courses-grid" id="coursesGrid">
+                        <!-- Course cards will be dynamically inserted here -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="pagination-btn prev" id="prevBtn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="pagination-numbers" id="paginationNumbers"></div>
+                        <button class="pagination-btn next" id="nextBtn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>
+                        <i class="fas fa-graduation-cap"></i>
+                        Learn<span class="highlight">Hub</span>
+                    </h3>
+                    <p>Empowering learners worldwide with quality education and skills training.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 LearnHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/courses.js"></script>
+</body>
+</html>
